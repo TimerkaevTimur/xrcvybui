@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} News {% endblock %}
+
+
+{% block content %} 
+
+<ul class="posts">
+    {% for post in newslist%}
+    <li class="post">
+        <p class="post-title">{{ post.title }}</p>
+        <p class="post-text">{{ post.text }}</p>
+    </li>
+    {% endfor %}
+</ul>
+
+
+
+{% endblock %}
